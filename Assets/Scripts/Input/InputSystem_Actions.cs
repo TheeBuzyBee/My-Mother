@@ -183,7 +183,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""priority"": 0
                 },
                 {
-                    ""name"": ""Fowards"",
+                    ""name"": ""Forwards"",
                     ""type"": ""Button"",
                     ""id"": ""699f1fc6-948d-40fc-b7cf-c061be593013"",
                     ""expectedControlType"": """",
@@ -193,7 +193,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""priority"": 0
                 },
                 {
-                    ""name"": ""Downwards"",
+                    ""name"": ""Backwards"",
                     ""type"": ""Button"",
                     ""id"": ""a655cc74-0656-472f-9868-9a7c088f2e86"",
                     ""expectedControlType"": """",
@@ -513,44 +513,44 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""2d8c5aca-e008-4602-aa8a-48c3668e0251"",
-                    ""path"": ""<Keyboard>/w"",
+                    ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Fowards"",
+                    ""action"": ""Forwards"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
                     ""id"": ""e0212da0-a603-4f82-b3f0-020457caac2c"",
-                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""path"": ""<Gamepad>/dpad/down"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Gamepad"",
-                    ""action"": ""Fowards"",
+                    ""action"": ""Forwards"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
                     ""id"": ""13a8c6ef-6e52-4d50-81c0-8c8a813f77a1"",
-                    ""path"": ""<Keyboard>/s"",
+                    ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Downwards"",
+                    ""action"": ""Backwards"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
                     ""id"": ""138d44ea-172c-4b46-a2b2-e2fd41121a9d"",
-                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""path"": ""<Gamepad>/dpad/up"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Gamepad"",
-                    ""action"": ""Downwards"",
+                    ""action"": ""Backwards"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -1201,8 +1201,8 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_Player_Previous = m_Player.FindAction("Previous", throwIfNotFound: true);
         m_Player_Next = m_Player.FindAction("Next", throwIfNotFound: true);
         m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
-        m_Player_Fowards = m_Player.FindAction("Fowards", throwIfNotFound: true);
-        m_Player_Downwards = m_Player.FindAction("Downwards", throwIfNotFound: true);
+        m_Player_Forwards = m_Player.FindAction("Forwards", throwIfNotFound: true);
+        m_Player_Backwards = m_Player.FindAction("Backwards", throwIfNotFound: true);
         m_Player_Left = m_Player.FindAction("Left", throwIfNotFound: true);
         m_Player_Right = m_Player.FindAction("Right", throwIfNotFound: true);
         // UI
@@ -1307,8 +1307,8 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Previous;
     private readonly InputAction m_Player_Next;
     private readonly InputAction m_Player_Sprint;
-    private readonly InputAction m_Player_Fowards;
-    private readonly InputAction m_Player_Downwards;
+    private readonly InputAction m_Player_Forwards;
+    private readonly InputAction m_Player_Backwards;
     private readonly InputAction m_Player_Left;
     private readonly InputAction m_Player_Right;
     /// <summary>
@@ -1359,13 +1359,13 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @Sprint => m_Wrapper.m_Player_Sprint;
         /// <summary>
-        /// Provides access to the underlying input action "Player/Fowards".
+        /// Provides access to the underlying input action "Player/Forwards".
         /// </summary>
-        public InputAction @Fowards => m_Wrapper.m_Player_Fowards;
+        public InputAction @Forwards => m_Wrapper.m_Player_Forwards;
         /// <summary>
-        /// Provides access to the underlying input action "Player/Downwards".
+        /// Provides access to the underlying input action "Player/Backwards".
         /// </summary>
-        public InputAction @Downwards => m_Wrapper.m_Player_Downwards;
+        public InputAction @Backwards => m_Wrapper.m_Player_Backwards;
         /// <summary>
         /// Provides access to the underlying input action "Player/Left".
         /// </summary>
@@ -1427,12 +1427,12 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Sprint.started += instance.OnSprint;
             @Sprint.performed += instance.OnSprint;
             @Sprint.canceled += instance.OnSprint;
-            @Fowards.started += instance.OnFowards;
-            @Fowards.performed += instance.OnFowards;
-            @Fowards.canceled += instance.OnFowards;
-            @Downwards.started += instance.OnDownwards;
-            @Downwards.performed += instance.OnDownwards;
-            @Downwards.canceled += instance.OnDownwards;
+            @Forwards.started += instance.OnForwards;
+            @Forwards.performed += instance.OnForwards;
+            @Forwards.canceled += instance.OnForwards;
+            @Backwards.started += instance.OnBackwards;
+            @Backwards.performed += instance.OnBackwards;
+            @Backwards.canceled += instance.OnBackwards;
             @Left.started += instance.OnLeft;
             @Left.performed += instance.OnLeft;
             @Left.canceled += instance.OnLeft;
@@ -1477,12 +1477,12 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Sprint.started -= instance.OnSprint;
             @Sprint.performed -= instance.OnSprint;
             @Sprint.canceled -= instance.OnSprint;
-            @Fowards.started -= instance.OnFowards;
-            @Fowards.performed -= instance.OnFowards;
-            @Fowards.canceled -= instance.OnFowards;
-            @Downwards.started -= instance.OnDownwards;
-            @Downwards.performed -= instance.OnDownwards;
-            @Downwards.canceled -= instance.OnDownwards;
+            @Forwards.started -= instance.OnForwards;
+            @Forwards.performed -= instance.OnForwards;
+            @Forwards.canceled -= instance.OnForwards;
+            @Backwards.started -= instance.OnBackwards;
+            @Backwards.performed -= instance.OnBackwards;
+            @Backwards.canceled -= instance.OnBackwards;
             @Left.started -= instance.OnLeft;
             @Left.performed -= instance.OnLeft;
             @Left.canceled -= instance.OnLeft;
@@ -1853,19 +1853,19 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSprint(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Fowards" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "Forwards" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnFowards(InputAction.CallbackContext context);
+        void OnForwards(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Downwards" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "Backwards" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnDownwards(InputAction.CallbackContext context);
+        void OnBackwards(InputAction.CallbackContext context);
         /// <summary>
         /// Method invoked when associated input action "Left" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
