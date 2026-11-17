@@ -33,28 +33,28 @@ public class InputManager : MonoBehaviour
     {
         _DIR8[0] = _inputSystemActions.Player.Move.ReadValue<Vector3>().x < -_stickDeadzone || _inputSystemActions.Player.Left.IsPressed();
         _DIR8[1] = _inputSystemActions.Player.Move.ReadValue<Vector3>().x > _stickDeadzone || _inputSystemActions.Player.Right.IsPressed();
-        _DIR8[2] = _inputSystemActions.Player.Move.ReadValue<Vector3>().y > _stickDeadzone || _inputSystemActions.Player.Forwards.IsPressed();
-        _DIR8[3] = _inputSystemActions.Player.Move.ReadValue<Vector3>().y < -_stickDeadzone || _inputSystemActions.Player.Backwards.IsPressed();
+        _DIR8[2] = _inputSystemActions.Player.Move.ReadValue<Vector3>().y > _stickDeadzone || _inputSystemActions.Player.Backwards.IsPressed();
+        _DIR8[3] = _inputSystemActions.Player.Move.ReadValue<Vector3>().y < -_stickDeadzone || _inputSystemActions.Player.Forwards.IsPressed();
         
         _DIR8[5] = _inputSystemActions.Player.Move.ReadValue<Vector3>().x < -_stickDeadzone 
         && _inputSystemActions.Player.Move.ReadValue<Vector3>().y > _stickDeadzone 
         || _inputSystemActions.Player.Left.IsPressed() 
-        && _inputSystemActions.Player.Forwards.IsPressed();
+        && _inputSystemActions.Player.Backwards.IsPressed();
         
         _DIR8[4] = _inputSystemActions.Player.Move.ReadValue<Vector3>().x > _stickDeadzone 
         && _inputSystemActions.Player.Move.ReadValue<Vector3>().y > _stickDeadzone 
         || _inputSystemActions.Player.Right.IsPressed()
-         && _inputSystemActions.Player.Forwards.IsPressed();
+         && _inputSystemActions.Player.Backwards.IsPressed();
         
          _DIR8[6] = _inputSystemActions.Player.Move.ReadValue<Vector3>().x < -_stickDeadzone 
         && _inputSystemActions.Player.Move.ReadValue<Vector3>().y < -_stickDeadzone 
         || _inputSystemActions.Player.Left.IsPressed() 
-        && _inputSystemActions.Player.Backwards.IsPressed();
+        && _inputSystemActions.Player.Forwards.IsPressed();
         
         _DIR8[7] = _inputSystemActions.Player.Move.ReadValue<Vector3>().x > _stickDeadzone 
         && _inputSystemActions.Player.Move.ReadValue<Vector3>().y < -_stickDeadzone 
         || _inputSystemActions.Player.Right.IsPressed()
-         && _inputSystemActions.Player.Backwards.IsPressed();
+         && _inputSystemActions.Player.Forwards.IsPressed();
           
         
         for (int i = 0; i < _DIR8.Length; i++)

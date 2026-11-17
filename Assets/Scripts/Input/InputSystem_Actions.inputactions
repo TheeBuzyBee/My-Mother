@@ -427,7 +427,7 @@
                 {
                     "name": "",
                     "id": "2d8c5aca-e008-4602-aa8a-48c3668e0251",
-                    "path": "<Keyboard>/s",
+                    "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
@@ -438,7 +438,7 @@
                 {
                     "name": "",
                     "id": "e0212da0-a603-4f82-b3f0-020457caac2c",
-                    "path": "<Gamepad>/dpad/down",
+                    "path": "<Gamepad>/dpad/up",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
@@ -448,22 +448,22 @@
                 },
                 {
                     "name": "",
-                    "id": "13a8c6ef-6e52-4d50-81c0-8c8a813f77a1",
-                    "path": "<Keyboard>/w",
+                    "id": "138d44ea-172c-4b46-a2b2-e2fd41121a9d",
+                    "path": "<Gamepad>/dpad/down",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Keyboard&Mouse",
+                    "groups": ";Gamepad",
                     "action": "Backwards",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "138d44ea-172c-4b46-a2b2-e2fd41121a9d",
-                    "path": "<Gamepad>/dpad/up",
+                    "id": "13a8c6ef-6e52-4d50-81c0-8c8a813f77a1",
+                    "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Gamepad",
+                    "groups": ";Keyboard&Mouse",
                     "action": "Backwards",
                     "isComposite": false,
                     "isPartOfComposite": false
