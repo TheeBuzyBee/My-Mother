@@ -8,10 +8,12 @@ public class InputManager : MonoBehaviour
     private InputSystem_Actions _inputSystemActions;
     
     public Vector3 MoveDirection {get; private set;}
+    public bool Jump {get; private set;}
 
     private void Update()
     {
         MoveDirection = SetMoveDirection();
+        Jump = _inputSystemActions.Player.Jump.WasPressedThisFrame();
     }
 
     private void Awake() { _inputSystemActions = new InputSystem_Actions(); }

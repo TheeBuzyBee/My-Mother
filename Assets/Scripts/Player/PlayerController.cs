@@ -16,5 +16,9 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         _movement.UpdateMovement(_input.MoveDirection);
+        if (_input.Jump)
+        {
+            //_movement.JumpUpdate();
+        }
     }
 }

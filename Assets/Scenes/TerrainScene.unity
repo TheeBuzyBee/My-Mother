@@ -177,7 +177,7 @@ Transform:
   m_GameObject: {fileID: 10731144}
   serializedVersion: 2
   m_LocalRotation: {x: 0.1736482, y: 0, z: 0, w: 0.9848078}
-  m_LocalPosition: {x: 440.3, y: 7, z: 148.06792}
+  m_LocalPosition: {x: 440.3, y: 6.9136324, z: 151.22902}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -451,6 +451,10 @@ PrefabInstance:
     - target: {fileID: 715354228106639175, guid: b58d32ecd835869e9acae120373b09a3, type: 3}
       propertyPath: m_Constraints
       value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567012535177934907, guid: b58d32ecd835869e9acae120373b09a3, type: 3}
+      propertyPath: _jumpHeigh
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3567012535177934907, guid: b58d32ecd835869e9acae120373b09a3, type: 3}
       propertyPath: _moveSpeed
@@ -989,6 +993,7 @@ GameObject:
   - component: {fileID: 2013917063}
   - component: {fileID: 2013917062}
   - component: {fileID: 2013917065}
+  - component: {fileID: 2013917066}
   m_Layer: 0
   m_Name: CinemachineCamera
   m_TagString: Untagged
@@ -1010,7 +1015,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineFollow
   TrackerSettings:
     BindingMode: 3
-    PositionDamping: {x: 1, y: 1, z: 1}
+    PositionDamping: {x: 0.2, y: 0.2, z: 0.2}
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
@@ -1107,6 +1112,21 @@ MonoBehaviour:
       Wait: 1
       Time: 2
     Restrictions: 0
+--- !u!114 &2013917066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013917060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d70cc20219cd84593f67d248eafe36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCameraOffset
+  Offset: {x: 0, y: 1, z: 3}
+  ApplyAfter: 1
+  PreserveComposition: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
