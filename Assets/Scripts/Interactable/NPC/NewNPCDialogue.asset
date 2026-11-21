@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d90bfe10a2e98644af81614b7c1ae3d, type: 3}
   m_Name: NewNPCDialogue
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
-  npcName: 
-  npcPortrait: 
-  dialogueLines: []
-  typingSpeed: 0
+  npcName: Odin
+  npcPortrait: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  dialogueLines:
+  - Hello there little cube! i am an NPC!
+  - Interact with me all day long! hohoho!
+  typingSpeed: 0.05
