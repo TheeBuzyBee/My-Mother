@@ -5,7 +5,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private PlayerMovement _movement;
+    private PlayerJump _jump;
     private InputManager _input;
+    private CustomGravity _gravity;
 
     private void Start()
     {

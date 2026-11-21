@@ -423,11 +423,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &692580968 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 334123984109027452, guid: b58d32ecd835869e9acae120373b09a3, type: 3}
-  m_PrefabInstance: {fileID: 721052173}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &721052173
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -439,26 +434,6 @@ PrefabInstance:
     - target: {fileID: 334123984109027452, guid: b58d32ecd835869e9acae120373b09a3, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 715354228106639175, guid: b58d32ecd835869e9acae120373b09a3, type: 3}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 715354228106639175, guid: b58d32ecd835869e9acae120373b09a3, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 715354228106639175, guid: b58d32ecd835869e9acae120373b09a3, type: 3}
-      propertyPath: m_Constraints
-      value: 112
-      objectReference: {fileID: 0}
-    - target: {fileID: 3567012535177934907, guid: b58d32ecd835869e9acae120373b09a3, type: 3}
-      propertyPath: _jumpHeigh
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3567012535177934907, guid: b58d32ecd835869e9acae120373b09a3, type: 3}
-      propertyPath: _moveSpeed
-      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7710966894842252768, guid: b58d32ecd835869e9acae120373b09a3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -503,29 +478,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 334123984109027452, guid: b58d32ecd835869e9acae120373b09a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 721052182}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b58d32ecd835869e9acae120373b09a3, type: 3}
 --- !u!4 &721052174 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7710966894842252768, guid: b58d32ecd835869e9acae120373b09a3, type: 3}
   m_PrefabInstance: {fileID: 721052173}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &721052182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 692580968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 623da1b4e00ccc407a45e22117c95a78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CustomGravity
-  gravityScale: 50
 --- !u!1 &1163730370
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,7 +633,7 @@ GameObject:
   - component: {fileID: 1337450859}
   - component: {fileID: 1337450858}
   - component: {fileID: 1337450857}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}

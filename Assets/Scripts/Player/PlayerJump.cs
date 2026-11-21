@@ -6,7 +6,8 @@ public class PlayerJump : MonoBehaviour
     private Transform _transform;
     private Rigidbody _rigidbody;
     
-    [SerializeField] private float _jumpHeight;
+    [SerializeField] private float _jumpForce;
+    
 
     private void Start()
     {
